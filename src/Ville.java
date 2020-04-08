@@ -1,11 +1,14 @@
 
 public class Ville {
-	private String nomVille;
-	private int nbHabitants;
-	private String nomPays;
-	private char categorie;
+	protected String nomVille;
+	protected int nbHabitants;
+	protected String nomPays;
+	protected char categorie;
 	
-	
+	public static int nbreInstances = 0;
+	protected static int nbreInstancesBis = 0;  
+	  
+	  
 	//Constructeur par défaut
 	public Ville() {
 		System.out.println("Création d'une ville !");
@@ -13,6 +16,9 @@ public class Ville {
 		nomPays = "Inconnu";
 		nbHabitants = 0;
 		this.setCategorie();
+		
+		 nbreInstances++;
+		 nbreInstancesBis++;   
 	}
 	
 	//Constructeur avec param
@@ -22,6 +28,9 @@ public class Ville {
 		nbHabitants = pNbHabitants;
 		nomPays = pNomPays;
 		this.setCategorie();
+		
+		nbreInstances++;
+	    nbreInstancesBis++;  
 	}
 	
 	//Accesseurs
@@ -40,6 +49,10 @@ public class Ville {
 	public char getCategorie() {
 		return categorie;
 	}
+	
+	public static int getNombreInstancesBis() {
+		return nbreInstancesBis;
+	}  
 	
 	//Mutateurs
 	public void setNomville(String nVille) {
