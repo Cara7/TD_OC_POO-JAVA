@@ -29,5 +29,10 @@ public class Capitale extends Ville {
 	public void setMonument(String monument) {
 		this.monument = monument;
 	}
-	 
+
+	public String toString(){
+		  String str = super.toString() + "\n \t ==>>" + this.monument + ""
+		  		+ "en est un monument";
+		  return str;
+	}
 }

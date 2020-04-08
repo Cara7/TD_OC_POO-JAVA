@@ -81,11 +81,12 @@ public class Ville {
 	}
 	
 	//Décrit la ville
-	  public String decrisToi() {
+
+	public String decrisToi() {
 	    return "\t"+this.nomVille+" est une ville de "+this.nomPays+ ","
 	    		+ "	elle comporte : "+this.nbHabitants+" habitant(s) => elle est donc"
 	    				+ "de catégorie : "+this.categorie;
-	  }
+	}
 	  
 	  //Retourne une chaîne de caractères selon le résultat de la comparaison
 	    public String comparer(Ville v1) {
@@ -99,7 +100,13 @@ public class Ville {
 	       
 	      return str;
 	    }
-	
+	    
+	    public String toString(){
+	    	  return "\t"+this.nomVille+" est une ville de "+this.nomPays+","
+	    	  		+ "elle comporte : "+this.nbHabitants+""
+	    	  				+ " => elle est donc de catégorie"
+	    	  				+ ": "+this.categorie;
+	    }
 	
 	
 }
